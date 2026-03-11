@@ -574,40 +574,42 @@
             white-space: nowrap;
         }
         .price-box .price-tag {
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 900;
             color: var(--ocean-dark);
             line-height: 1;
+            margin-bottom: 4px;
         }
         .price-box .price-tag .currency {
-            font-size: 1.8rem;
+            font-size: 2rem;
             vertical-align: super;
+            font-weight: 700;
         }
         .price-box .price-label {
             font-size: 1rem;
-            color: var(--text-medium);
-            font-weight: 600;
+            color: var(--text-light);
             margin-bottom: 4px;
         }
         .price-box .price-note {
-            font-size: 0.88rem;
+            font-size: 0.82rem;
             color: var(--text-light);
-            margin-top: 6px;
             margin-bottom: 20px;
         }
         .urgency-badge {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
             background: #fff8e1;
             border: 1px solid #ffe082;
             color: #e65100;
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             font-weight: 700;
-            padding: 8px 20px;
+            padding: 8px 16px;
             border-radius: 8px;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
         .urgency-badge .timer-icon {
-            margin-right: 4px;
+            font-size: 1rem;
         }
 
         /* ═══════════════════════════════════════
@@ -617,28 +619,26 @@
             background: var(--white);
         }
         .guarantee-box {
-            background: var(--ocean-pale);
-            border: 2px dashed var(--ocean-bright);
-            border-radius: 16px;
-            padding: 30px 26px;
             display: flex;
             align-items: flex-start;
             gap: 18px;
-            max-width: 600px;
-            margin: 0 auto;
+            background: var(--ocean-pale);
+            border: 2px dashed var(--ocean-bright);
+            border-radius: 16px;
+            padding: 28px 24px;
         }
         .guarantee-box .shield {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             flex-shrink: 0;
         }
         .guarantee-box h3 {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 800;
             color: var(--ocean-dark);
             margin-bottom: 8px;
         }
         .guarantee-box p {
-            font-size: 0.93rem;
+            font-size: 0.95rem;
             color: var(--text-medium);
             line-height: 1.6;
         }
@@ -651,7 +651,7 @@
         }
         .faq .section-title {
             text-align: center;
-            font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+            font-size: clamp(1.25rem, 4vw, 1.7rem);
             font-weight: 800;
             color: var(--ocean-dark);
             margin-bottom: 28px;
@@ -660,50 +660,48 @@
         .faq-list {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            max-width: 600px;
-            margin: 0 auto;
+            gap: 10px;
         }
         .faq-item {
             background: var(--white);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
         }
         .faq-question {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            width: 100%;
+            background: none;
+            border: none;
             padding: 18px 20px;
-            cursor: pointer;
+            font-family: 'Inter', sans-serif;
             font-size: 0.95rem;
             font-weight: 700;
             color: var(--ocean-dark);
-            background: none;
-            border: none;
-            width: 100%;
-            text-align: left;
-            font-family: inherit;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             gap: 12px;
+            text-align: left;
             transition: background 0.2s;
         }
         .faq-question:hover {
-            background: rgba(0,0,0,0.02);
+            background: var(--ocean-pale);
         }
-        .faq-question .faq-icon {
-            font-size: 1.3rem;
-            flex-shrink: 0;
-            transition: transform 0.3s ease;
+        .faq-icon {
+            font-size: 1.4rem;
+            font-weight: 300;
             color: var(--ocean-mid);
+            transition: transform 0.3s;
+            flex-shrink: 0;
         }
-        .faq-item.open .faq-question .faq-icon {
+        .faq-item.open .faq-icon {
             transform: rotate(45deg);
         }
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.35s ease, padding 0.35s ease;
+            transition: max-height 0.4s ease;
         }
         .faq-item.open .faq-answer {
             max-height: 400px;
@@ -712,96 +710,58 @@
             padding: 0 20px 18px;
             font-size: 0.9rem;
             color: var(--text-medium);
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         /* ═══════════════════════════════════════
            9. FINAL CTA
         ═══════════════════════════════════════ */
         .final-cta {
-            background: linear-gradient(165deg, var(--ocean-dark) 0%, var(--ocean-deep) 40%, #0d4a8a 100%);
+            background: linear-gradient(165deg, var(--ocean-dark), var(--ocean-deep));
             color: var(--white);
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .final-cta::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            pointer-events: none;
+            padding: 64px 20px;
         }
         .final-cta .section-title {
-            font-size: clamp(1.25rem, 4vw, 1.8rem);
+            font-size: clamp(1.2rem, 4vw, 1.7rem);
             font-weight: 800;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
             line-height: 1.35;
-            position: relative;
-            max-width: 580px;
-            margin-left: auto;
-            margin-right: auto;
         }
         .final-cta .section-sub {
             font-size: 1rem;
             color: rgba(255,255,255,0.8);
-            margin-bottom: 30px;
-            max-width: 520px;
+            margin-bottom: 32px;
+            line-height: 1.7;
+            max-width: 540px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.65;
-            position: relative;
         }
         .final-cta .section-sub strong {
             color: #ffca28;
         }
-        .final-cta .cta-btn {
-            font-size: 1.2rem;
-            padding: 20px 48px;
-            position: relative;
-        }
         .final-cta .closing {
             margin-top: 20px;
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.45);
-            position: relative;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.5);
         }
 
         /* ═══════════════════════════════════════
            FOOTER
         ═══════════════════════════════════════ */
         footer {
-            background: #061526;
+            background: #060e1a;
             color: rgba(255,255,255,0.35);
             text-align: center;
-            padding: 26px 20px;
-            font-size: 0.76rem;
+            padding: 28px 20px;
+            font-size: 0.75rem;
         }
         footer a {
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.45);
             text-decoration: none;
         }
-
-        /* ── Responsive ── */
-        @media (max-width: 480px) {
-            .section-padding {
-                padding: 42px 16px;
-            }
-            .cta-btn {
-                font-size: 1.05rem;
-                padding: 16px 28px;
-                width: 100%;
-                max-width: 360px;
-            }
-            .hero .cta-btn,
-            .final-cta .cta-btn {
-                font-size: 1.08rem;
-                padding: 18px 28px;
-            }
-            .ebook-cover {
-                width: 175px;
-                min-height: 245px;
-            }
+        footer a:hover {
+            color: rgba(255,255,255,0.7);
         }
     </style>
 </head>
@@ -812,20 +772,20 @@
     ════════════════════════════════════════ -->
     <section class="hero">
         <div class="container">
-            <span class="hero-badge">🎣 Manual Digital de Pesca</span>
+            <div class="hero-badge">🎣 Manual Digital de Pesca</div>
             <span class="hero-icon">🐟</span>
-            <h1><span>21 Trucos Secretos de Anzuelo</span> que Pueden Multiplicar Tus Capturas Desde Tu Próxima Salida</h1>
+            <h1>21 Trucos Secretos de Anzuelo que <span>Pueden Multiplicar Tus Capturas</span> Desde Tu Próxima Salida</h1>
             <p class="sub">Descubre pequeños ajustes en el anzuelo, la caída y la carnada que hacen que el pez muerda más rápido, con más confianza y sin sospechar la trampa.</p>
-            <a href="#comprar" class="cta-btn">
+            <a href="https://pay.hotmart.com/D104845563N" target="_blank" class="cta-btn">
                 Sí, Quiero Pescar Más Peces
-                <span class="sub-text">Acceso inmediato · PDF descargable</span>
+                <span class="sub-text">Solo $10 · Descarga inmediata</span>
             </a>
             <p class="hero-trust">🔒 Pago seguro · Descarga inmediata · Garantía 15 días</p>
         </div>
     </section>
 
     <!-- Wave -->
-    <div class="wave-divider">
+    <div class="wave-divider" style="background: linear-gradient(165deg, var(--ocean-mid), var(--ocean-mid));">
         <svg viewBox="0 0 1440 50" preserveAspectRatio="none">
             <path fill="#ffffff" d="M0,25 C360,50 720,0 1080,25 C1260,38 1380,30 1440,25 L1440,50 L0,50 Z"/>
         </svg>
@@ -836,15 +796,15 @@
     ════════════════════════════════════════ -->
     <section class="problems section-padding">
         <div class="container">
-            <h2 class="section-title">¿Te identificas con algo de esto?</h2>
+            <h2 class="section-title">¿Te identificas con esto?</h2>
 
             <ul class="problem-list">
                 <li>
-                    <span class="icon">😤</span>
-                    <span>Pasas <strong>horas pescando</strong> y vuelves a casa con las manos vacías</span>
+                    <span class="icon">😔</span>
+                    <span>Pasas horas pescando y <strong>vuelves a casa con las manos vacías</strong></span>
                 </li>
                 <li>
-                    <span class="icon">😩</span>
+                    <span class="icon">😤</span>
                     <span>Sientes la picada… pero <strong>el pez no se engancha</strong></span>
                 </li>
                 <li>
@@ -909,7 +869,7 @@
 
             <!-- ★ CTA EXTRA after benefits ★ -->
             <div class="cta-wrap">
-                <a href="#comprar" class="cta-btn">
+                <a href="https://pay.hotmart.com/D104845563N" target="_blank" class="cta-btn">
                     Sí, Quiero los 21 Trucos Ahora
                     <span class="sub-text">Solo $10 · Acceso inmediato</span>
                 </a>
@@ -1062,7 +1022,7 @@
                     <span class="timer-icon">⏳</span> Precio especial de lanzamiento disponible hoy
                 </div>
 
-                <a href="https://tu-link-de-checkout.com" class="cta-btn" style="width: 100%; display: block;">
+                <a href="https://pay.hotmart.com/D104845563N" target="_blank" class="cta-btn" style="width: 100%; display: block;">
                     Quiero los 21 Trucos Ahora
                     <span class="sub-text">Acceso inmediato después del pago</span>
                 </a>
@@ -1185,7 +1145,7 @@
                 …o aplicar estos <strong>21 trucos</strong> y aumentar tus posibilidades de captura. 🎣<br><br>
                 Son pequeños ajustes. Toman minutos. Y pueden cambiar completamente tu jornada de pesca.
             </p>
-            <a href="https://tu-link-de-checkout.com" class="cta-btn">
+            <a href="https://pay.hotmart.com/D104845563N" target="_blank" class="cta-btn">
                 Sí, Quiero Pescar Más Peces
                 <span class="sub-text">Solo $10 · Descarga inmediata · Garantía 15 días</span>
             </a>
